@@ -9,11 +9,8 @@ Lyric.init({
  id: {
     type: DataTypes.INTEGER, allowNull: false, autoIncrement:true, primaryKey: true
  },
- paragraph: {
-    type: DataTypes.STRING, allowNull: false, required: true
- },
- index: {
-   type: DataTypes.INTEGER, allowNull: false
+ content: {
+    type: DataTypes.TEXT, allowNull: false, required: true
  }},
 
  {

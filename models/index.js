@@ -15,7 +15,7 @@ Song.belongsTo(Album);
 Album.hasMany(Song);
 
 Lyric.belongsTo(Song);
-Song.hasMany(Lyric);
+Song.hasOne(Lyric);
 
 module.exports = {
  Album,

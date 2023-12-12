@@ -3,7 +3,9 @@ const router = express.Router();
 const Controllers = require("../controllers");
 
 router.get('/', (req, res) => {
- Controllers.songController.getSongs(res);
+ let startsWith = req.query.startsWith;
+ let albumId = req.query.albumId;
+ Controllers.songController.getSongs(albumId, startsWith, res);
 })
 
 router.post('/create', (req, res) => {

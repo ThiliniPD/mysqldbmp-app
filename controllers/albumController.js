@@ -24,7 +24,7 @@ const createAlbums = (data, res) => {
 };
 
 const updateAlbum = (req, res) => {
-  Models.Album.update(req.body, { where: { albumId: req.params.id } })
+  Models.Album.update(req.body, { where: { id: req.params.id } })
     .then(function (data) {
       res.send({ result: 200, data: data });
     })
@@ -35,7 +35,7 @@ const updateAlbum = (req, res) => {
 };
 
 const deleteAlbum = (req, res) => {
-  Models.Album.destroy({ where: { albumId: req.params.id } })
+  Models.Album.destroy({ where: { id: req.params.id } })
     .then(function (data) {
       res.send({ result: 200, data: data });
     })

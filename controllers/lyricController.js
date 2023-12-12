@@ -24,7 +24,7 @@ const createLyrics = (data, res) => {
 };
 
 const updateLyric = (req, res) => {
-  Models.Lyric.update(req.body, { where: { lyricId: req.params.id } })
+  Models.Lyric.update(req.body, { where: { id: req.params.id } })
     .then(function (data) {
       res.send({ result: 200, data: data });
     })
@@ -35,7 +35,7 @@ const updateLyric = (req, res) => {
 };
 
 const deleteLyric = (req, res) => {
-  Models.Lyric.destroy({ where: { lyricId: req.params.id } })
+  Models.Lyric.destroy({ where: { id: req.params.id } })
     .then(function (data) {
       res.send({ result: 200, data: data });
     })
